@@ -5,7 +5,6 @@ const cors = require('cors');
 
 const app = express();
 const port = 5001
-const my-app_URL = 'https://projectk-main-3.onrender.com';
 
 // Middleware
 app.use(cors());
