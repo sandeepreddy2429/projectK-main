@@ -21,7 +21,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:5001/login', {
+            const response = await fetch('https://projectk-main-1.onrender.com', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
