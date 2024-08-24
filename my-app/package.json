@@ -22,11 +22,9 @@
     "web-vitals": "^2.1.4"
   },
   "engines": {
-  "node": ">=14.0.0"
-},
-
+    "node": ">=14.0.0"
+  },
   "scripts": {
-      
     "prebuild": "npm install",
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -50,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
