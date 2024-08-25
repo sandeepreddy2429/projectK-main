@@ -8,6 +8,7 @@ const Login = () => {
         password: ''
     });
     const [message, setMessage] = useState('');
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     const handleChange = (e) => {
@@ -20,8 +21,9 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
         try {
-            const response = await fetch('https://projectk-main-1.onrender.com', {
+            const response = await fetch('https://projectk-main-1.onrender.com/login', { // Updated to the correct endpoint
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -40,6 +42,8 @@ const Login = () => {
         } catch (error) {
             setMessage('Login failed. Please try again later.');
             console.error('Error:', error);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -69,6 +73,7 @@ const Login = () => {
                                 name="username"
                                 value={formData.username}
                                 onChange={handleChange}
+                                required
                             />
                         </label>
                     </div>
@@ -80,10 +85,13 @@ const Login = () => {
                                 name="password"
                                 value={formData.password}
                                 onChange={handleChange}
+                                required
                             />
                         </label>
                     </div>
-                    <button type="submit">Login</button>
+                    <button type="submit" disabled={loading}>
+                        {loading ? 'Logging in...' : 'Login'}
+                    </button>
                 </form>
                 <div style={{ marginTop: '10px', textAlign: 'center' }}>
                     <a href="/register">Register Now</a>

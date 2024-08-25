@@ -2,14 +2,19 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const cors = require('cors');
-
 const app = express();
-const port = 5001
- 
+const port = 5001;
+
+// CORS Configuration
+const corsOptions = {
+    origin: 'https://projectk-main-1.onrender.com', // Update to your actual frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type'],
+};
 
 // Middleware
-app.use(cors());
 app.use(express.json());
+app.use(cors(corsOptions));
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://REDDY:CHANTI@cluster0.immqz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
