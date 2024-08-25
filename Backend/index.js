@@ -7,7 +7,7 @@ const port = 5001;
 
 // CORS Configuration
 const corsOptions = {
-    origin: 'https://projectk-main-1.onrender.com', // Update to your actual frontend URL
+    origin: 'https://projectk-main-3.onrender.com/', // Update to your actual frontend URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type'],
 };
