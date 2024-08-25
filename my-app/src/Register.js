@@ -49,6 +49,7 @@ const Register = () => {
     };
 
     return (
+        
         <div className="register-container">
             <h2>Register</h2>
             <form onSubmit={handleSubmit}>
@@ -76,6 +77,7 @@ const Register = () => {
                         />
                     </label>
                 </div>
+           
                 <div>
                     <label>
                         Password:<br />

@@ -66,7 +66,7 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 2; /* Ensure the container is on top of stars */
-    animation: rotate 7s ease-in-out forwards, disco 7s ease; /* Disco effect stops after 7s */
+    /* animation: rotate 7s ease-in-out forwards, disco 7s ease; Disco effect stops after 7s */
 }
 
 /* Keyframe animations for login container */
@@ -104,11 +104,7 @@ body {
 }
 
 /* Keyframe to fade in the final static background */
-@keyframes showBackground {
-    to {
-        opacity: 1;
-    }
-}
+ 
 
 
 h2 {
